@@ -70,8 +70,8 @@ else:
         sys.exit(1)
 
 languages = "{{ cookiecutter.languages }}".replace(' ', '').split(',')
-for lang in languages:
-    assert len(lang) == 2 and lang.lower() == lang, "Each language code shall consist of two lowercase letters, '" + lang + "' does not."
+#for lang in languages:
+#    assert len(lang) == 2 and lang.lower() == lang, "Each language code shall consist of two lowercase letters, '" + lang + "' does not."
 if "{{ cookiecutter.use_i18n }}" == 'y':
     assert len(languages) > 1, "'use_i18n' is set with less than two languages, which doesn't make sense."
 else:
